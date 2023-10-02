@@ -109,4 +109,8 @@ class PetModel extends Model
 
         $stm -> execute();
     }
+
+    function forgetpassword($correo){
+
+    }
 }

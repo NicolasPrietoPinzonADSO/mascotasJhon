@@ -21,5 +21,7 @@
             ?>
         <button>Ingresar</button>
         <p class="form__inputContainer--text">¿Aún no posee una cuenta?<a class="form__inputContainer--link" href="<?=URL?>/register">Regístrate </a></p>
+        <p style= "" class="recover">¿Olvidó su contraseña?<a class="form__inputContainer--linkRecover" href="<?=URL?>/login/forget">Recuperela </a></p>
+
     </form>
 </main>

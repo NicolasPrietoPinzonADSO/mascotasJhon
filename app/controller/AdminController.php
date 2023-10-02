@@ -61,9 +61,11 @@ class AdminController extends Controller
     }
 
     function new(){
+
         $race = $this -> model1 -> select();
         $genero = $this -> model2 -> select();
         $category = $this -> model3 -> select();
+
         $data = [
             "titulo" => "usuario",
             "subtitulo" => "vista de usuario",
@@ -314,14 +316,11 @@ class AdminController extends Controller
 
             $photo = $_POST['photo'];
 
-            if(!file_exists("assets/images")){
-                mkdir("assets/images", 0777, true);
-            }
-            
             if(is_file($photo)){
                 chmod($photo, 0777);
                 unlink($photo);
             }
+            
             $this -> model->delete($id);
             header("Location:".URL."/admin");
 

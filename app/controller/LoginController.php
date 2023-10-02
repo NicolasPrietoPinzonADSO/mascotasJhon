@@ -82,4 +82,17 @@ class LoginController extends Controller
             header("Location:".URL."/login");
         }
     }
+
+    public function forget(){
+        $data = [
+            "titulo" => "Olvido contraseña",
+            "subtitulo" => "Recupere la contraseña"
+        ];
+
+        $this -> view("forget", $data);
+    }
+
+    public function sendEmail(){
+        
+    }
 }
